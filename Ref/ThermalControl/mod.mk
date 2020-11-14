@@ -1,0 +1,1 @@
+SRC = ThermalControlComponentAi.xml

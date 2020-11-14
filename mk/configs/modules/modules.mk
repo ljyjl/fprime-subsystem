@@ -92,7 +92,12 @@ REF_MODULES := \
 	Ref/RecvBuffApp \
 	Ref/SendBuffApp \
 	Ref/SignalGen \
-	Ref/PingReceiver
+	Ref/PingReceiver \
+	Ref/HealthMonitor \
+	Ref/ModeManagement \
+	Ref/ThermalControl \
+	Ref/Thermometer 
+	
 	
 Ref_MODULES := \
 	\

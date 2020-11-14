@@ -5,7 +5,7 @@
     <import_port_type>Svc/Sched/SchedPortAi.xml</import_port_type>
     <import_port_type>Ref/SubPorts/TemperaturePortAi.xml</import_port_type>
     <import_port_type>Ref/SubPorts/TemperatureReqPortAi.xml</import_port_type>
-    <import_dictionary><parameters>
+    <parameters>
 	    <parameter id="0" name="phase" data_type="U32" default="0" set_opcode="0" save_opcode="1">
 		    <comment>
 		    phase by TC
@@ -26,7 +26,7 @@
 		    Threshold max value  by TC
             </comment>
         </parameter>
-    </parameters></import_dictionary>
+    </parameters>
     
     <ports>
         <port name="schedIn" data_type="Svc::Sched"  kind="sync_input"    max_number="1">

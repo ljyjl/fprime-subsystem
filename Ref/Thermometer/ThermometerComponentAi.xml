@@ -2,25 +2,24 @@
 <?xml-model href="../../Autocoders/schema/ISF/component_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <component name="Thermometer" kind="active" namespace="Ref" modeler="true">
-
     <import_port_type>Ref/SubPorts/TemperatureReqPortAi.xml</import_port_type>
     <import_port_type>Ref/SubPorts/TemperaturePortAi.xml</import_port_type>
-    <import_dictionary><commands>
+    <commands>
 	<command kind="async" opcode="0" mnemonic="THERMO_SET_TEMP">
 		<args>
 			<arg name="temperature" type="F32">
 			</arg>
 		</args>
 	</command>
-    </commands></import_dictionary>
-    <import_dictionary><telemetry>
+    </commands>
+    <telemetry>
 	<channel id="0" name="THERMO_TEMP" data_type="F32">
         <comment>
 	    The temperature of the termometer
 	    </comment>
 	</channel>
-    </telemetry></import_dictionary>
-    <import_dictionary><events>
+    </telemetry>
+    <events>
 	<event id="0" name="TERMO_TEMP_UPDATED" severity="ACTIVITY_HI" format_string="Temperature of the thermometer updated to: %f" >
 		<args>
 			<arg name="temperature" type="F32">
@@ -33,7 +32,7 @@
 			</arg>
 		</args>
 	</event>
-    </events></import_dictionary>
+    </events>
 
     <ports>
         <port name="temperatureReqIn" data_type="SubPorts::TemperatureReq"  kind="async_input"    max_number="1">
@@ -41,5 +40,4 @@
         <port name="temperatureOut" data_type="SubPorts::Temperature"  kind="output"    max_number="1">
         </port>
     </ports>
-
 </component>
